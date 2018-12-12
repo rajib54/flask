@@ -2,7 +2,7 @@ import sys
 
 sys.path.append('.')
 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from Service import QuoteService
 from Handler import QuoteHandler
 
