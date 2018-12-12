@@ -1,5 +1,6 @@
 from Abstract import QuoteHandlerAbstract
 from flask import jsonify
+from Model import Quote
 
 
 class QuoteHandler(QuoteHandlerAbstract):
@@ -8,13 +9,17 @@ class QuoteHandler(QuoteHandlerAbstract):
 
     @classmethod
     def getQuoteById(self, id):
+        quote = Quote()
+        quote.id = id
+        quote.name = "Name 1"
+
         payload = {
             "payload": {
                 "quote": {
                     "quote": [
                         {
-                            "id": id,
-                            "Name": "Name 1"
+                            "id": quote.id,
+                            "name": quote.name
                         }
                     ]
                 }
