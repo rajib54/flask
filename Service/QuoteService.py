@@ -1,7 +1,7 @@
 class QuoteService:
-    def __init__(self, quoteHandler):
-        self.quoteHandler = quoteHandler
+    def __init__(self, quotehandlerinterface):
+        self.quotehandlerinterface = quotehandlerinterface
         self.logCollector = "Log Collector"
 
     def getQuoteById(self, id):
-        return self.quoteHandler.getQuoteById(id)
+        return self.quotehandlerinterface.getQuoteById(id)
