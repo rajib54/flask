@@ -1,9 +1,8 @@
-from flask.json import JSONEncoder
+from Model import MyJsonEncoder
 
 
-class Quote(JSONEncoder):
+class Quote():
     id = None
     name = None
 
-    def default(self, obj):
-        return JSONEncoder.default(self, obj)
+    json_encoder = MyJsonEncoder

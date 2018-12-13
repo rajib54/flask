@@ -17,10 +17,7 @@ class QuoteHandler(QuoteHandlerAbstract):
             "payload": {
                 "quote": {
                     "quote": [
-                        {
-                            "id": quote.id,
-                            "name": quote.name
-                        }
+                        quote
                     ]
                 }
             }
