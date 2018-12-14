@@ -1,2 +1,2 @@
 from Quote import *
-from MyJsonEncoder import *
+from Base import *

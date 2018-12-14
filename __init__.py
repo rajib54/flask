@@ -2,13 +2,11 @@ import sys
 
 sys.path.append('.')
 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from Service import QuoteService
 from Handler import QuoteHandler
-from Model import MyJsonEncoder
 
 app = Flask(__name__)
-app.json_encoder = MyJsonEncoder
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -22,10 +20,10 @@ def index():
 @app.route('/quote/<id>')
 def quotebyid(id):
     service = QuoteService(QuoteHandler())
-    return service.getQuoteById(id)
+    return jsonify(service.getQuoteById(id))
 
 
 @app.route('/quotes')
 def quotes():
     service = QuoteService(QuoteHandler())
-    return service.getQuotes()
+    return jsonify(service.getQuotes())

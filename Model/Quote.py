@@ -1,8 +1,6 @@
-from Model import MyJsonEncoder
+from Model.Base import Base
 
 
-class Quote():
+class Quote(Base):
     id = None
     name = None
-
-    json_encoder = MyJsonEncoder
