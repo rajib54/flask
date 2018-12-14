@@ -1,6 +1,6 @@
-from Abstract import QuoteHandlerAbstract
+from src.Abstract import QuoteHandlerAbstract
 from flask import jsonify
-from Model import Quote
+from src.Model import Quote
 
 
 class QuoteHandler(QuoteHandlerAbstract):
