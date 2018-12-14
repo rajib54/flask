@@ -23,3 +23,9 @@ def index():
 def quotebyid(id):
     service = QuoteService(QuoteHandler())
     return service.getQuoteById(id)
+
+
+@app.route('/quotes')
+def quotes():
+    service = QuoteService(QuoteHandler())
+    return service.getQuotes()
