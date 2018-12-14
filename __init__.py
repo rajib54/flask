@@ -3,9 +3,9 @@ import sys
 sys.path.append('.')
 
 from flask import Flask, request
-from src.Service import QuoteService
-from src.Handler import QuoteHandler
-from src.Model import MyJsonEncoder
+from Service import QuoteService
+from Handler import QuoteHandler
+from Model import MyJsonEncoder
 
 app = Flask(__name__)
 app.json_encoder = MyJsonEncoder

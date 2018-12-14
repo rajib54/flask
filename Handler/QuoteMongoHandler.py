@@ -1,4 +1,4 @@
-from src.Abstract import QuoteHandlerAbstract
+from Abstract import QuoteHandlerAbstract
 
 
 class QuoteMongoHandler(QuoteHandlerAbstract):

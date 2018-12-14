@@ -1,4 +1,4 @@
-from src.Model import MyJsonEncoder
+from Model import MyJsonEncoder
 
 
 class Quote():
