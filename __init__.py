@@ -20,10 +20,10 @@ def index():
 @app.route('/quote/<id>')
 def quotebyid(id):
     service = QuoteService(QuoteHandler())
-    return jsonify(service.getQuoteById(id))
+    return jsonify(service.getquotebyid(id))
 
 
 @app.route('/quotes')
 def quotes():
     service = QuoteService(QuoteHandler())
-    return jsonify(service.getQuotes())
+    return jsonify(service.getquotes())

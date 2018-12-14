@@ -5,9 +5,9 @@ class QuoteHandlerAbstract(object):
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def getQuotes(self):
+    def getquotes(self):
         pass
 
     @abc.abstractmethod
-    def getQuoteById(self, id):
+    def getquotebyid(self, id):
         pass

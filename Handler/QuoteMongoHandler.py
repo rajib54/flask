@@ -6,9 +6,9 @@ class QuoteMongoHandler(QuoteHandlerAbstract):
         self.logCollector = "Log Collector"
 
     @classmethod
-    def getQuotes(self):
+    def getquotes(self):
         return "Get data for through mongo"
 
     @classmethod
-    def getQuoteById(self, id):
+    def getquotebyid(self, id):
         return "Get data for through mongo " + format(id)

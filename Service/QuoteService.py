@@ -3,8 +3,8 @@ class QuoteService:
         self.quoteabstracthandler = quoteabstracthandler
         self.logCollector = "Log Collector"
 
-    def getQuoteById(self, id):
-        return self.quoteabstracthandler.getQuoteById(id)
+    def getquotebyid(self, id):
+        return self.quoteabstracthandler.getquotebyid(id)
 
-    def getQuotes(self):
-        return self.quoteabstracthandler.getQuotes()
+    def getquotes(self):
+        return self.quoteabstracthandler.getquotes()

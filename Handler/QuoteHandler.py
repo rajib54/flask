@@ -7,7 +7,7 @@ class QuoteHandler(QuoteHandlerAbstract):
         self.logCollector = "Log Collector"
 
     @classmethod
-    def getQuotes(self):
+    def getquotes(self):
         quote1 = Quote()
         quote1.id = 1
         quote1.name = "Quote 1"
@@ -30,7 +30,7 @@ class QuoteHandler(QuoteHandlerAbstract):
         return payload
 
     @classmethod
-    def getQuoteById(self, id):
+    def getquotebyid(self, id):
         quote = Quote()
         quote.id = id
         quote.name = "Quote 1"
