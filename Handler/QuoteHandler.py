@@ -16,7 +16,7 @@ class QuoteHandler(QuoteHandlerAbstract):
         quote2 = Quote()
         quote2.id = 2
         quote2.name = "Quote 2"
-        quote2array = quote1.toarray()
+        quote2array = quote2.toarray()
 
         quotes = [quote1array, quote2array]
 
@@ -32,8 +32,8 @@ class QuoteHandler(QuoteHandlerAbstract):
     @classmethod
     def getquotebyid(self, id):
         quote = Quote()
-        quote.id = id
-        quote.name = "Quote 1"
+        quote.id = int(id)
+        quote.name = "Quote " + id
 
         payload = {
             "payload": {
