@@ -8,17 +8,13 @@ class QuoteHandler(QuoteHandlerAbstract):
 
     @classmethod
     def getquotes(self):
-        quote1 = Quote()
-        quote1.id = 1
-        quote1.name = "Quote 1"
-        quote1array = quote1.toarray()
+        quotes = []
 
-        quote2 = Quote()
-        quote2.id = 2
-        quote2.name = "Quote 2"
-        quote2array = quote2.toarray()
-
-        quotes = [quote1array, quote2array]
+        for i in range(1, 3):
+            quote = Quote()
+            quote.id = i
+            quote.name = "Quote " + str(i)
+            quotes.append(quote.toarray())
 
         payload = {
             "payload": {
