@@ -1,4 +1,4 @@
-from Model.Base import Base
+from app.Model.Base import Base
 
 
 class Quote(Base):

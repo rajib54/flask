@@ -1,5 +1,5 @@
-from Abstract import QuoteHandlerAbstract
-from Model import Quote
+from app.Abstract import QuoteHandlerAbstract
+from app.Model import Quote
 
 
 class QuoteHandler(QuoteHandlerAbstract):
