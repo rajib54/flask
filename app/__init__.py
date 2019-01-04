@@ -1,11 +1,13 @@
-import sys
-sys.path.append('.')
-
 from flask import Flask, request, jsonify
-from app.Service import QuoteService
-from app.Handler import QuoteHandler
+from flask_sqlalchemy import SQLAlchemy
+from app.config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
+db = SQLAlchemy(app)
+
+from app.Service import QuoteService
+from app.Handler import QuoteHandler
 
 
 @app.route('/', methods=['GET', 'POST'])

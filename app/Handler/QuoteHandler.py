@@ -1,5 +1,6 @@
 from app.Abstract import QuoteHandlerAbstract
 from app.Model import Quote
+from app import db
 
 
 class QuoteHandler(QuoteHandlerAbstract):
@@ -10,10 +11,12 @@ class QuoteHandler(QuoteHandlerAbstract):
     def getquotes(self):
         quotes = []
 
-        for i in range(1, 3):
+        data = db.engine.execute("select * from quote")
+        for row in data:
             quote = Quote()
-            quote.id = i
-            quote.name = "Quote " + str(i)
+            quote.id = row[0]
+            quote.name = row[1]
+            quote.description = row[2]
             quotes.append(quote.toarray())
 
         payload = {
@@ -28,8 +31,11 @@ class QuoteHandler(QuoteHandlerAbstract):
     @classmethod
     def getquotebyid(self, id):
         quote = Quote()
-        quote.id = int(id)
-        quote.name = "Quote " + id
+        data = db.engine.execute("select * from quote where id = " +id)
+        for row in data:
+            quote.id = row[0]
+            quote.name = row[1]
+            quote.description = row[2]
 
         payload = {
             "payload": {
