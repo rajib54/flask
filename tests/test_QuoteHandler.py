@@ -4,7 +4,7 @@ import sys
 topdir = os.path.join(os.path.dirname(__file__), "..")
 sys.path.append(topdir)
 
-from app.Handler import QuoteHandler
+from Handler import QuoteHandler
 
 
 def test_get_quotes():

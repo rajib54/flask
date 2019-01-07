@@ -1,6 +1,6 @@
-from app.Abstract import QuoteHandlerAbstract
-from app.Model import Quote
-from app import db
+from Abstract import QuoteHandlerAbstract
+from Model import Quote
+from .. import db
 
 
 class QuoteHandler(QuoteHandlerAbstract):
